@@ -1,5 +1,13 @@
-In the project directory, you can run:
+Clone the repository
 
+Navigate to the project directory 
+
+In the project directory, 
+Install the project dependencies using :
+
+### `npm install`
+
+Run the project using :
 ### `yarn start`
 
 Runs the app in the development mode.\
