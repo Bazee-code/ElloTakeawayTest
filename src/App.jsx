@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import SearchBar from './frontend/components/ui/searchbar';
 import useBooks from './frontend/hooks/useBooks';
@@ -42,17 +42,11 @@ const style = {
 const App = () => {
   const { data, loading, error } = useBooks();
   const [query, setQuery] = useState('');
-  const [booksData, setBooksData] = useState([]);
+  
   const [readingList, setReadingList] = useState([]);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
-  useEffect(() => {
-    if (data) {
-      setBooksData(data);
-    }
-  }, [data]);
 
   const handleAddBook = (data) => {
     if (!readingList?.includes(data)) {
